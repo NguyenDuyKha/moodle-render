@@ -1,0 +1,18 @@
+services:
+  - type: web
+    name: moodle-app
+    runtime: docker
+    image:
+      url: docker.io/bitnami/moodle:latest
+    plan: free
+    envVars:
+      - key: MOODLE_DATABASE_HOST
+        fromDatabase:
+          name: moodle-db
+          property: connectionString
+      - key: ALLOW_EMPTY_PASSWORD
+        value: "yes"
+
+databases:
+  - name: moodle-db
+    plan: free
