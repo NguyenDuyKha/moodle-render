@@ -31,7 +31,7 @@ services:
     environment:
       LANG: en_US.UTF-8
       LANGUAGE: en_US:en
-      SITE_URL: http://localhost
+      SITE_URL: https://testy-tammi-nguyenduykha-8dfeac14.koyeb.app
       DB_TYPE: pgsql
       DB_HOST: postgres
       DB_PORT: 5432
